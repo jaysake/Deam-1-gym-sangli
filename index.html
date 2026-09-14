@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM 1 GYM - Enter The Arena</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-container": "#00e5ff",
+                        "on-primary": "#00363d",
+                        "surface": "#101419",
+                        "on-surface": "#e0e2ea"
+                    },
+                    fontFamily: {
+                        "display-hero": ["Bebas Neue"],
+                        "body-md": ["Montserrat"]
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #101419; }
+        canvas { display: block; }
+        #overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            pointer-events: none;
+            background: radial-gradient(circle at center, transparent 0%, #101419 100%);
+        }
+        #content {
+            pointer-events: auto;
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 1s forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+
+    <div id="overlay">
+        <div id="content">
+            <h1 class="font-display-hero text-6xl md:text-8xl tracking-widest uppercase mb-4" style="text-shadow: 0 0 20px rgba(0,229,255,0.5);">DREAM 1 GYM</h1>
+            <p class="text-xl md:text-2xl uppercase tracking-[0.3em] mb-12 text-[#00e5ff]">Sangli Flagship</p>
+            <a href="main.html" class="inline-block px-10 py-4 border-2 border-primary-container text-primary-container font-bold text-lg uppercase tracking-widest rounded-lg hover:bg-primary-container hover:text-on-primary transition-all duration-300" style="box-shadow: 0 0 15px rgba(0,229,255,0.3), inset 0 0 15px rgba(0,229,255,0.3);">
+                ENTER ARENA
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Three.js Setup
+        const scene = new THREE.Scene();
+        // Add subtle fog
+        scene.fog = new THREE.FogExp2('#101419', 0.002);
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create Particles
+        const geometry = new THREE.BufferGeometry();
+        const particlesCount = 2000;
+        const posArray = new Float32Array(particlesCount * 3);
+
+        for(let i = 0; i < particlesCount * 3; i++) {
+            posArray[i] = (Math.random() - 0.5) * 10;
+        }
+        geometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+        const material = new THREE.PointsMaterial({
+            size: 0.015,
+            color: '#00e5ff',
+            transparent: true,
+            opacity: 0.8,
+            blending: THREE.AdditiveBlending
+        });
+
+        const particlesMesh = new THREE.Points(geometry, material);
+        scene.add(particlesMesh);
+
+        // Core central shape (Icosahedron to represent strength/structure)
+        const coreGeometry = new THREE.IcosahedronGeometry(1.5, 1);
+        const coreMaterial = new THREE.MeshBasicMaterial({ 
+            color: '#00e5ff', 
+            wireframe: true,
+            transparent: true,
+            opacity: 0.15
+        });
+        const coreMesh = new THREE.Mesh(coreGeometry, coreMaterial);
+        scene.add(coreMesh);
+
+        camera.position.z = 4;
+
+        // Mouse interaction
+        let mouseX = 0;
+        let mouseY = 0;
+        document.addEventListener('mousemove', (event) => {
+            mouseX = event.clientX / window.innerWidth - 0.5;
+            mouseY = event.clientY / window.innerHeight - 0.5;
+        });
+
+        // Animation Loop
+        const clock = new THREE.Clock();
+        function animate() {
+            requestAnimationFrame(animate);
+            const elapsedTime = clock.getElapsedTime();
+
+            particlesMesh.rotation.y = elapsedTime * 0.05;
+            particlesMesh.rotation.x = elapsedTime * 0.02;
+
+            coreMesh.rotation.y = elapsedTime * 0.2;
+            coreMesh.rotation.x = elapsedTime * 0.15;
+
+            // Parallax effect with mouse
+            camera.position.x += (mouseX * 2 - camera.position.x) * 0.05;
+            camera.position.y += (-mouseY * 2 - camera.position.y) * 0.05;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
+</body>
+</html>

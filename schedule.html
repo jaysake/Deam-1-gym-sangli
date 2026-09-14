@@ -1,0 +1,243 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@600;700&amp;family=Montserrat:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main> :first-child {
+                margin-top: 0 !important;
+            }
+
+            main> :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#004f58", "surface-container-low": "#181c21", "error-container": "#93000a", "surface-container": "#1c2025", "tertiary-fixed-dim": "#ffb2ba", "surface": "#101419", "tertiary": "#ffe7e8", "on-tertiary-fixed-variant": "#910030", "surface-bright": "#36393f", "inverse-surface": "#e0e2ea", "surface-dim": "#101419", "on-tertiary": "#670020", "tertiary-container": "#ffc0c6", "on-background": "#e0e2ea", "error": "#ffb4ab", "on-surface-variant": "#bac9cc", "surface-tint": "#00daf3", "secondary-fixed-dim": "#b0d500", "surface-container-high": "#262a30", "on-secondary-fixed": "#171e00", "inverse-primary": "#006875", "on-error": "#690005", "on-primary": "#00363d", "secondary-container": "#caf300", "on-tertiary-fixed": "#400011", "secondary-fixed": "#caf300", "on-secondary-fixed-variant": "#3e4c00", "surface-container-lowest": "#0a0e13", "outline-variant": "#3b494c", "on-secondary-container": "#596c00", "background": "#101419", "on-error-container": "#ffdad6", "surface-variant": "#31353b", "secondary": "#ffffff", "inverse-on-surface": "#2d3136", "on-surface": "#e0e2ea", "primary-fixed": "#9cf0ff", "outline": "#849396", "surface-container-highest": "#31353b", "on-tertiary-container": "#b3003e", "tertiary-fixed": "#ffd9dc", "primary": "#c3f5ff", "primary-fixed-dim": "#00daf3", "on-primary-container": "#00626e", "primary-container": "#00e5ff", "on-secondary": "#2a3400", "on-primary-fixed": "#001f24" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-2xl": "4rem", "margin-sm": "1rem", "margin": "2rem", "space-xs": "0.25rem" }, fontFamily: { "label-lg": ["Inter"], "display-hero": ["Bebas Neue"], "body-lg": ["Montserrat"], "headline-lg": ["Montserrat"], "headline-md": ["Montserrat"], "body-md": ["Montserrat"], "headline-xl": ["Bebas Neue"], "headline-xl-mobile": ["Bebas Neue"], "label-sm": ["Inter"], "stat-counter": ["Bebas Neue"], "display-hero-mobile": ["Bebas Neue"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700" }], "display-hero": ["80px", { "lineHeight": "80px", "letterSpacing": "0.04em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["44px", { "lineHeight": "48px", "letterSpacing": "0.04em", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "stat-counter": ["36px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero-mobile": ["48px", { "lineHeight": "48px", "letterSpacing": "0.03em", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+    <div class="fixed top-0 left-0 w-full z-50">
+        <div
+            class="w-full bg-surface-container-lowest py-1.5 px-gutter-sm text-center flex items-center justify-center gap-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <span class="material-symbols-outlined text-secondary-container text-body-md">timer</span><span
+                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Sangli HQ Facility
+                Hours: <strong class="text-primary">5:00 AM â€“ 10:00 PM</strong> (Open 7 Days â€¢ High Intensity Floor
+                Active)</span></div>
+        <header class="w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <div class="h-20 w-full px-gutter lg:px-space-xl flex items-center justify-between">
+                <div class="flex items-center gap-space-md"><img alt="DREAM - 1 GYM Logo"
+                        class="h-8 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1WNQ506eC7e851AOhSfx103eS6br4lCI7vAhykiFpK3wt4NM0qc7fCC9nWTnUl1R0s5MmG-puPgwXg5QM_okeVLDUNxMw4PoJmWuWBqkpRMSlavAWddUa1nXTpucxElGMzpgNNsGy2Vbikua-vFY8JAXvbgTo0bpZdngd2TVIYaxNvtbdfJ5Zgqwr5PntlnF69E0mCf1wG908WyOpIMoN1Cm-SmO7Aq5RJ4Zz1P7Tq2UWX-i_OyQnCopQ">
+                    <div class="flex flex-col"><span
+                            class="font-headline-lg text-headline-lg tracking-tight uppercase text-on-surface leading-none">DREAM
+                            - 1 <span class="text-primary-container">GYM</span></span><span
+                            class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-widest">Sangli
+                            Flagship</span></div>
+                </div>
+                <nav class="hidden xl:flex items-center gap-space-lg"
+                    data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a
+                        aria-current="page"
+                        class="uppercase tracking-wider transition-colors py-2 px-3 bg-surface-container-high text-primary font-bold rounded-lg"
+                        href="main.html">Home &amp; Tour</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        data-path="programs-and-facilities" href="javascript:void(0)">OUTDOOR ACTIVITIES</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="membership.html">Member Portal &amp; Dashboard</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="schedule.html">Schedule &amp; Classes</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="contact.html">Sangli Location &amp; Contact</a></nav>
+                <div class="flex items-center gap-space-md"><a
+                        class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-low hover:bg-surface-container-high hover:text-secondary-container transition-all"
+                        data-path="free-day-pass" href="javascript:void(0)">Free 3 DAY<br>TRIAL</a><a
+                        class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]"
+                        data-path="join-now" href="javascript:void(0)">BE OUR PART<br></a>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="w-full pt-28 bg-surface min-h-screen"><div class="flex flex-col w-full"><!-- SCHEDULE & TIME INCLUSIVE -->
+<section class="w-full bg-surface-container-lowest py-space-2xl">
+    <div class="w-full px-gutter lg:px-space-xl">
+        <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+            <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container mb-space-xs block">Operational Schedule</span>
+            <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase">Class Timetable & Floor Hours</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">Train on your time. Over 30+ instructor-led sessions a week.</p>
+        </div>
+        
+        <div class="overflow-x-auto rounded-xl shadow-lg border border-surface-container-high bg-surface-container">
+            <table class="w-full text-left border-collapse">
+                <thead>
+                    <tr class="bg-surface-container-high text-on-surface uppercase font-label-lg tracking-wider">
+                        <th class="p-4 border-b border-surface-variant">Time</th>
+                        <th class="p-4 border-b border-surface-variant">Monday</th>
+                        <th class="p-4 border-b border-surface-variant">Wednesday</th>
+                        <th class="p-4 border-b border-surface-variant">Friday</th>
+                        <th class="p-4 border-b border-surface-variant">Weekend</th>
+                    </tr>
+                </thead>
+                <tbody class="text-body-md text-on-surface-variant">
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                        <td class="p-4 border-b border-surface-variant font-bold text-primary">06:00 AM</td>
+                        <td class="p-4 border-b border-surface-variant">CrossFit WOD</td>
+                        <td class="p-4 border-b border-surface-variant">CrossFit WOD</td>
+                        <td class="p-4 border-b border-surface-variant">HIIT Cardio</td>
+                        <td class="p-4 border-b border-surface-variant text-secondary-container">Open Turf</td>
+                    </tr>
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                        <td class="p-4 border-b border-surface-variant font-bold text-primary">10:00 AM</td>
+                        <td class="p-4 border-b border-surface-variant">Powerlifting Base</td>
+                        <td class="p-4 border-b border-surface-variant">Olympic Lifts</td>
+                        <td class="p-4 border-b border-surface-variant">Active Recovery</td>
+                        <td class="p-4 border-b border-surface-variant text-secondary-container">Open Turf</td>
+                    </tr>
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                        <td class="p-4 border-b border-surface-variant font-bold text-primary">05:00 PM</td>
+                        <td class="p-4 border-b border-surface-variant">Hypertrophy Chest/Back</td>
+                        <td class="p-4 border-b border-surface-variant">Hypertrophy Legs</td>
+                        <td class="p-4 border-b border-surface-variant">Hypertrophy Arms</td>
+                        <td class="p-4 border-b border-surface-variant text-secondary-container">Closed</td>
+                    </tr>
+                    <tr class="hover:bg-surface-container-low transition-colors">
+                        <td class="p-4 border-b border-surface-variant font-bold text-primary">07:30 PM</td>
+                        <td class="p-4 border-b border-surface-variant">CrossFit WOD</td>
+                        <td class="p-4 border-b border-surface-variant">CrossFit WOD</td>
+                        <td class="p-4 border-b border-surface-variant">Metabolic Engine</td>
+                        <td class="p-4 border-b border-surface-variant text-secondary-container">Closed</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section><!-- SANGLI LOCATION, CONTACT & TRIAL FORM --></div></main>
+    <footer class="w-full bg-surface-container-lowest text-on-surface py-space-2xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-full px-gutter lg:px-space-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-2xl">
+                <div>
+                    <div class="flex items-center gap-space-sm mb-space-md"><img alt="DREAM - 1 GYM Logo"
+                            class="h-8 w-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida/AEtjO1WNQ506eC7e851AOhSfx103eS6br4lCI7vAhykiFpK3wt4NM0qc7fCC9nWTnUl1R0s5MmG-puPgwXg5QM_okeVLDUNxMw4PoJmWuWBqkpRMSlavAWddUa1nXTpucxElGMzpgNNsGy2Vbikua-vFY8JAXvbgTo0bpZdngd2TVIYaxNvtbdfJ5Zgqwr5PntlnF69E0mCf1wG908WyOpIMoN1Cm-SmO7Aq5RJ4Zz1P7Tq2UWX-i_OyQnCopQ"><span
+                            class="font-headline-lg text-headline-lg uppercase text-on-surface">DREAM - 1 <span
+                                class="text-primary-container">GYM</span></span></div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Elite performance athletic
+                        complex in Sangli. Engineered for functional hypertrophy, Olympic lifting, strength
+                        conditioning, and professional fitness lifestyle transformation.</p>
+                    <div
+                        class="inline-flex items-center gap-space-sm px-3 py-1.5 rounded-full bg-surface-container-high">
+                        <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span
+                            class="font-label-sm text-label-sm uppercase text-secondary-container">5:00 AM â€“ 10:00 PM
+                            Active Ops</span></div>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Sangli
+                        Location &amp; HQ</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-xs">Near Vijayanagar Chowk,
+                        Sangli-Miraj Road</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-xs">Sangli, Maharashtra 416416
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface mt-space-sm flex items-center gap-space-xs">
+                        <span class="material-symbols-outlined text-primary-container text-body-md">call</span> +91
+                        (0233) 267-1900</p>
+                    <p class="font-body-md text-body-md text-on-surface flex items-center gap-space-xs"><span
+                            class="material-symbols-outlined text-primary-container text-body-md">mail</span>
+                        j40000948@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Elite
+                        Amenities</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Biomechanics Turf &amp; Prowler Lane</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Rogue Olympic Lifting Racks</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Steam &amp; Cold Recovery Plunge</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            InBody Certified Body Composition</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Air-Conditioned Hygenic Locker Suites</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Connect
+                        &amp; Inquire</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Follow live club updates,
+                        personal records, and trainer highlights directly from our Sangli community.</p>
+                    <div class="flex items-center gap-space-sm mb-space-lg"><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">videocam</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">forum</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">map</span></a></div>
+                    <div class="p-space-md rounded-xl bg-surface-container-low"><span
+                            class="font-label-sm text-label-sm uppercase text-on-surface-variant block mb-1">Floor
+                            Status</span><span
+                            class="font-body-md text-body-md text-secondary-container flex items-center gap-2"><span
+                                class="w-2 h-2 rounded-full bg-secondary-container"></span> Moderate Turf Density
+                            (38%)</span></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md">
+                <span class="font-body-md text-body-md text-on-surface-variant">Â© 2025 DREAM - 1 GYM Sangli. All
+                    High-Performance Rights Reserved.</span>
+                <div class="flex items-center gap-space-md"><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Privacy Protocol</a><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Terms of Training</a><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Sangli Facility Rules</a></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+

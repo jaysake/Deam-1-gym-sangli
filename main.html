@@ -1,0 +1,757 @@
+﻿<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@600;700&amp;family=Montserrat:wght@400;600;700&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <style>
+        @layer base {
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                overscroll-behavior: none;
+            }
+
+            main> :first-child {
+                margin-top: 0 !important;
+            }
+
+            main> :last-child {
+                margin-bottom: 0 !important;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "on-primary-fixed-variant": "#004f58", "surface-container-low": "#181c21", "error-container": "#93000a", "surface-container": "#1c2025", "tertiary-fixed-dim": "#ffb2ba", "surface": "#101419", "tertiary": "#ffe7e8", "on-tertiary-fixed-variant": "#910030", "surface-bright": "#36393f", "inverse-surface": "#e0e2ea", "surface-dim": "#101419", "on-tertiary": "#670020", "tertiary-container": "#ffc0c6", "on-background": "#e0e2ea", "error": "#ffb4ab", "on-surface-variant": "#bac9cc", "surface-tint": "#00daf3", "secondary-fixed-dim": "#b0d500", "surface-container-high": "#262a30", "on-secondary-fixed": "#171e00", "inverse-primary": "#006875", "on-error": "#690005", "on-primary": "#00363d", "secondary-container": "#caf300", "on-tertiary-fixed": "#400011", "secondary-fixed": "#caf300", "on-secondary-fixed-variant": "#3e4c00", "surface-container-lowest": "#0a0e13", "outline-variant": "#3b494c", "on-secondary-container": "#596c00", "background": "#101419", "on-error-container": "#ffdad6", "surface-variant": "#31353b", "secondary": "#ffffff", "inverse-on-surface": "#2d3136", "on-surface": "#e0e2ea", "primary-fixed": "#9cf0ff", "outline": "#849396", "surface-container-highest": "#31353b", "on-tertiary-container": "#b3003e", "tertiary-fixed": "#ffd9dc", "primary": "#c3f5ff", "primary-fixed-dim": "#00daf3", "on-primary-container": "#00626e", "primary-container": "#00e5ff", "on-secondary": "#2a3400", "on-primary-fixed": "#001f24" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "2.5rem", "gutter": "1.5rem", "gutter-sm": "1rem", "space-sm": "0.5rem", "space-md": "1rem", "space-lg": "1.5rem", "space-2xl": "4rem", "margin-sm": "1rem", "margin": "2rem", "space-xs": "0.25rem" }, fontFamily: { "label-lg": ["Inter"], "display-hero": ["Bebas Neue"], "body-lg": ["Montserrat"], "headline-lg": ["Montserrat"], "headline-md": ["Montserrat"], "body-md": ["Montserrat"], "headline-xl": ["Bebas Neue"], "headline-xl-mobile": ["Bebas Neue"], "label-sm": ["Inter"], "stat-counter": ["Bebas Neue"], "display-hero-mobile": ["Bebas Neue"] }, fontSize: { "label-lg": ["13px", { "lineHeight": "18px", "letterSpacing": "0.06em", "fontWeight": "700" }], "display-hero": ["80px", { "lineHeight": "80px", "letterSpacing": "0.04em", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-lg": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-md": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "headline-xl": ["44px", { "lineHeight": "48px", "letterSpacing": "0.04em", "fontWeight": "400" }], "headline-xl-mobile": ["32px", { "lineHeight": "36px", "letterSpacing": "0.03em", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600" }], "stat-counter": ["36px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }], "display-hero-mobile": ["48px", { "lineHeight": "48px", "letterSpacing": "0.03em", "fontWeight": "400" }] } } } };</script>
+</head>
+
+<body class="bg-background font-body-md text-body-md text-on-surface antialiased">
+    <div class="fixed top-0 left-0 w-full z-50">
+        <div
+            class="w-full bg-surface-container-lowest py-1.5 px-gutter-sm text-center flex items-center justify-center gap-space-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <span class="material-symbols-outlined text-secondary-container text-body-md">timer</span><span
+                class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Sangli HQ Facility
+                Hours: <strong class="text-primary">5:00 AM â€“ 10:00 PM</strong> (Open 7 Days â€¢ High Intensity Floor
+                Active)</span></div>
+        <header class="w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <div class="h-20 w-full px-gutter lg:px-space-xl flex items-center justify-between">
+                <div class="flex items-center gap-space-md"><img alt="DREAM - 1 GYM Logo"
+                        class="h-8 w-auto object-contain"
+                        src="https://lh3.googleusercontent.com/aida/AEtjO1WNQ506eC7e851AOhSfx103eS6br4lCI7vAhykiFpK3wt4NM0qc7fCC9nWTnUl1R0s5MmG-puPgwXg5QM_okeVLDUNxMw4PoJmWuWBqkpRMSlavAWddUa1nXTpucxElGMzpgNNsGy2Vbikua-vFY8JAXvbgTo0bpZdngd2TVIYaxNvtbdfJ5Zgqwr5PntlnF69E0mCf1wG908WyOpIMoN1Cm-SmO7Aq5RJ4Zz1P7Tq2UWX-i_OyQnCopQ">
+                    <div class="flex flex-col"><span
+                            class="font-headline-lg text-headline-lg tracking-tight uppercase text-on-surface leading-none">DREAM
+                            - 1 <span class="text-primary-container">GYM</span></span><span
+                            class="font-label-sm text-label-sm uppercase text-on-surface-variant tracking-widest">Sangli
+                            Flagship</span></div>
+                </div>
+                <nav class="hidden xl:flex items-center gap-space-lg"
+                    data-active-classes="bg-surface-container-high text-primary font-bold rounded-lg"><a
+                        aria-current="page"
+                        class="uppercase tracking-wider transition-colors py-2 px-3 bg-surface-container-high text-primary font-bold rounded-lg"
+                        href="main.html">Home &amp; Tour</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        data-path="programs-and-facilities" href="javascript:void(0)">OUTDOOR ACTIVITIES</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="membership.html">Member Portal &amp; Dashboard</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="schedule.html">Schedule &amp; Classes</a><a
+                        class="font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg"
+                        href="contact.html">Sangli Location &amp; Contact</a></nav>
+                <div class="flex items-center gap-space-md"><a
+                        class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-low hover:bg-surface-container-high hover:text-secondary-container transition-all"
+                        data-path="free-day-pass" href="javascript:void(0)">Free 3 DAY<br>TRIAL</a><a
+                        class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]"
+                        data-path="join-now" href="javascript:void(0)">BE OUR PART<br></a>
+                    <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span
+                            class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="w-full pt-28 bg-surface min-h-screen"><div class="flex flex-col w-full"><!-- HERO SECTION -->
+            <section class="relative w-full overflow-hidden bg-surface-container-lowest">
+                <!-- Atmospheric Ambient Glows -->
+                <div
+                    class="absolute -top-32 left-1/4 w-96 h-96 bg-primary-container/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div
+                    class="absolute top-1/2 -right-24 w-80 h-80 bg-secondary-container/10 rounded-full blur-3xl pointer-events-none">
+                </div>
+                <div class="w-full px-gutter lg:px-space-xl pt-space-xl pb-space-2xl">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+                        <!-- Left Content -->
+                        <div class="lg:col-span-7 flex flex-col z-10">
+                            <div
+                                class="inline-flex items-center gap-space-xs self-start px-3 py-1.5 rounded-full bg-surface-container-high mb-space-md shadow-sm">
+                                <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+                                <span
+                                    class="font-label-sm text-label-sm uppercase tracking-wider text-secondary-container">Sangli's
+                                    Elite Training Flagship</span>
+                            </div>
+                            <h1
+                                class="font-display-hero text-display-hero text-on-surface uppercase tracking-tight leading-none mb-space-md">
+                                TRANSFORM YOUR LIMITS AT <span
+                                    class="text-primary-container drop-shadow-[0_0_24px_rgba(0,229,255,0.35)]">DREAM - 1
+                                    GYM</span> SANGLI
+                            </h1>
+                            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-space-xl">
+                                Premier Strength, Cardio, CrossFit &amp; Ground Activity Arena in Sangli. Engineered for
+                                raw biomechanics, metabolic endurance, and uncompromising athletic transformation.
+                            </p>
+                            <!-- CTAs -->
+                            <div class="flex flex-wrap items-center gap-space-md mb-space-xl">
+                                <a class="inline-flex items-center justify-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider px-6 py-4 rounded-xl bg-primary-container text-on-primary font-bold shadow-[0_0_24px_rgba(0,229,255,0.35)] hover:bg-primary transition-all scale-100 hover:scale-[1.02]"
+                                    href="#trial">
+                                    <span class="material-symbols-outlined text-[20px]">bolt</span>
+                                    Book Free 1-Day Trial
+                                </a>
+                                <a class="inline-flex items-center justify-center gap-space-xs font-label-lg text-label-lg uppercase tracking-wider px-6 py-4 rounded-xl bg-surface-container text-secondary-container hover:bg-surface-container-high transition-all shadow-sm"
+                                    href="#arena-zones">
+                                    <span class="material-symbols-outlined text-[20px]">explore</span>
+                                    Virtual Floor Tour
+                                </a>
+                            </div>
+                            <!-- Quick Key Metrics Grid -->
+                            <div class="grid grid-cols-2 sm:grid-cols-4 gap-space-md pt-space-lg">
+                                <div class="p-space-md bg-surface-container-low rounded-xl shadow-sm">
+                                    <span
+                                        class="font-stat-counter text-stat-counter text-primary block leading-tight">5,000+</span>
+                                    <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Sq Ft
+                                        Arena</span>
+                                </div>
+                                <div class="p-space-md bg-surface-container-low rounded-xl shadow-sm">
+                                    <span
+                                        class="font-stat-counter text-stat-counter text-secondary-container block leading-tight">100%</span>
+                                    <span
+                                        class="font-label-sm text-label-sm uppercase text-on-surface-variant">Certified
+                                        Trainers</span>
+                                </div>
+                                <div class="p-space-md bg-surface-container-low rounded-xl shadow-sm">
+                                    <span class="font-stat-counter text-stat-counter text-primary block leading-tight">4
+                                        ZONES</span>
+                                    <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Strength
+                                        &amp; Turf</span>
+                                </div>
+                                <div class="p-space-md bg-surface-container-low rounded-xl shadow-sm">
+                                    <span
+                                        class="font-stat-counter text-stat-counter text-on-surface block leading-tight">17
+                                        HRS</span>
+                                    <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">5 AM â€“
+                                        10 PM Ops</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Right Visual Showcase: Actual Gym Floor View -->
+                        <div class="lg:col-span-5 relative">
+                            <div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-container">
+                                <img alt="DREAM 1 GYM Sangli floor layout"
+                                    class="w-full h-[460px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbkEGyJ_fds0N-TFo0WvwzMiJoB8pggYE4yTZTi613iE0LLT0iKX6dXOClWW6R_p1ujNII0MCQmAIThqygwuoOTPKB1NOh3ZZXLxeYpOcyfD10Ds3gabpNRJqGNC-HKNY450DO3--FHT8-tn_ADwX9ujRY8wiofApvh_34zM7IMWYC3KIHHcNcLROK-yFNdFkBzGLHdwE3kEq3RBUJydflJeWcGeaKVIdgO7lvYpU240hOzbdRpAOiPyeJ3YFudw8rFA">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-90">
+                                </div>
+                                <!-- Floor Active Overlay Card -->
+                                <div
+                                    class="absolute bottom-space-md left-space-md right-space-md p-space-md rounded-xl bg-surface/90 backdrop-blur-md shadow-lg">
+                                    <div class="flex items-center justify-between mb-space-xs">
+                                        <span
+                                            class="font-label-sm text-label-sm uppercase tracking-widest text-primary">Floor
+                                            Grid Telemetry</span>
+                                        <span
+                                            class="inline-flex items-center gap-1.5 text-secondary-container font-label-sm text-label-sm uppercase">
+                                            <span
+                                                class="w-2 h-2 rounded-full bg-secondary-container animate-ping"></span>
+                                            Live Active
+                                        </span>
+                                    </div>
+                                    <p class="font-headline-md text-headline-md text-on-surface leading-tight">Sangli
+                                        Main Strength &amp; Sprint Corridor</p>
+                                    <p class="font-body-md text-body-md text-on-surface-variant">Precision markings,
+                                        high-impact rubber tiles, dual battle rope bay.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- BRAND RECOGNITION BANNER --><!-- BRAND RECOGNITION BANNER -->
+            <section class="w-full bg-surface-container-low py-space-xl">
+                <div class="w-full px-gutter lg:px-space-xl">
+                    <div
+                        class="p-space-lg lg:p-space-xl rounded-2xl bg-surface-container flex flex-col lg:flex-row items-center justify-between gap-space-xl shadow-xl">
+                        <div class="flex flex-col lg:max-w-xl">
+                            <div class="inline-flex items-center gap-space-xs mb-space-xs">
+                                <span
+                                    class="material-symbols-outlined text-primary-container text-body-md">verified</span>
+                                <span
+                                    class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container">Official
+                                    Facility Signage</span>
+                            </div>
+                            <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase mb-space-sm">Sangli's
+                                Elite Training Destination</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">
+                                Engineered from ground up with specialized dedicated zones: Olympic Cardio, CrossFit
+                                Boxes, Hypertrophy Machine Circuit, and Dedicated Ground Activity track for athletes who
+                                settle for nothing less than absolute results.
+                            </p>
+                        </div>
+                        <div
+                            class="w-full lg:w-96 flex-shrink-0 flex items-center gap-space-md bg-surface-container-high p-space-md rounded-xl shadow-inner">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary-container flex-shrink-0">
+                                <span class="material-symbols-outlined text-[28px]">sports_gymnastics</span>
+                            </div>
+                            <div>
+                                <span class="font-label-lg text-label-lg text-on-surface block uppercase">4 Disciplines
+                                    in 1</span>
+                                <span class="font-body-md text-body-md text-on-surface-variant">Gym â€¢ Cardio â€¢ CrossFit
+                                    â€¢ Ground Activity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- FACILITY & ARENA SHOWCASE SECTION --><!-- FACILITY & ARENA SHOWCASE SECTION -->
+            <section class="w-full bg-surface py-space-2xl" id="arena-zones">
+                <div class="w-full px-gutter lg:px-space-xl">
+                    <div class="flex flex-col md:flex-row md:items-end justify-between mb-space-2xl gap-space-md">
+                        <div>
+                            <div class="flex items-center gap-space-xs text-secondary-container mb-space-xs">
+                                <span class="material-symbols-outlined text-body-md">grid_view</span>
+                                <span class="font-label-sm text-label-sm uppercase tracking-widest">Facility
+                                    Exploration</span>
+                            </div>
+                            <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase">The Dream - 1 Arena
+                                Zones</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Step inside our high-intensity
+                                zones equipped for elite human performance.</p>
+                        </div>
+                        <div class="flex items-center gap-space-sm">
+                            <span class="font-label-sm text-label-sm uppercase text-on-surface-variant">All Zones
+                                Operational</span>
+                            <span
+                                class="px-3 py-1 bg-surface-container-high text-primary font-label-sm text-label-sm uppercase rounded-full">Sangli
+                                Flagship</span>
+                        </div>
+                    </div>
+                    <!-- 4 Zones Mosaic Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+                        <!-- Zone 1: Cardio & Cycling Deck -->
+                        <div
+                            class="group flex flex-col rounded-2xl overflow-hidden bg-surface-container shadow-lg transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative h-72 w-full overflow-hidden">
+                                <img alt="Cardio &amp; Cycling Deck at DREAM 1 GYM Sangli"
+                                    class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZdksL5VmKXmYCtOE3gEm_zanbg7ZZXP-eQSBXzT4x0OsTCm9xfY4dTnS1AkeTjDyC7Hz2PJPAj6AP95oVfiRnPaaUnFPSHZvNXYWdKjXqWmOo7lPW1kRZgwQGSuZ4jpSCce53j_tr3lE0PQLGWmMCEYpkwZA7l1guqoEUyZ0tgwpOPB2vsxiQpzzJ2prnY-8mgo4Y4EE5Gc2xTuqaoOJlGWiCdx9k5c0Mza4A0Ju9ZOLl2VrtNkZGbCbBsVWgIM34aw">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-3 left-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase rounded-lg">Zone
+                                    01</span>
+                            </div>
+                            <div class="p-space-lg flex flex-col flex-grow">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container text-body-md">directions_bike</span>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface">Cardio &amp; Spin Bay
+                                    </h3>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs flex-grow">
+                                    High-performance spin bikes, commercial ellipticals, and motorized treadmills for
+                                    peak VO2 max endurance conditioning.
+                                </p>
+                                <div class="mt-space-md pt-space-sm flex items-center justify-between">
+                                    <span class="font-label-sm text-label-sm uppercase text-primary">Air-Cooled
+                                        Floor</span>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant text-[20px]">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Zone 2: Free Weights & Dumbbell Bay -->
+                        <div
+                            class="group flex flex-col rounded-2xl overflow-hidden bg-surface-container shadow-lg transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative h-72 w-full overflow-hidden">
+                                <img alt="Free weights and dumbbell bay at DREAM 1 GYM Sangli"
+                                    class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKig0snmcWM6oBueBJtNnPfwtMQjGRoqJbh8PHjow9Qj7vtaqsqVTzS7HWbc4qu-OiOgO6KJmsZXyN-a5u-IjsfL7i4FMMf9EysJMZS9IE4nvyVd3Uj9ppSw7rLelylb2qNb6RuB3lYkKnDqknJOKkJ0elcJ5zp6F_zQo7AQLuplfp0vC7wd8KTTF3LU0Oc46Drr6nwkyvjMwG2tn-JM2vTRzTVubNk2q7Dvw3T_A_rizEJeqtCdszgNz5farZRILlEQ">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-3 left-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase rounded-lg">Zone
+                                    02</span>
+                            </div>
+                            <div class="p-space-lg flex flex-col flex-grow">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container text-body-md">fitness_center</span>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface">Free Weight Floor</h3>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs flex-grow">
+                                    Heavy lifting platforms, precision adjustable benches, Olympic bars, and a complete
+                                    dumbbell rack up to 40kg.
+                                </p>
+                                <div class="mt-space-md pt-space-sm flex items-center justify-between">
+                                    <span class="font-label-sm text-label-sm uppercase text-primary">Heavy Rubber
+                                        Padding</span>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant text-[20px]">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Zone 3: Resistance & Machine Circuit -->
+                        <div
+                            class="group flex flex-col rounded-2xl overflow-hidden bg-surface-container shadow-lg transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative h-72 w-full overflow-hidden">
+                                <img alt="Resistance and machine circuit at DREAM 1 GYM Sangli"
+                                    class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6eo5nrAMu5yEoKPsv4f70x-GqJrbgnaZOrs9QNyg9DG1KGVzCd0FoNhV9iGT9ylVeUfN9A0R7hWv9p86JiPbu6rQp6lfUFo5K3MRBbWoaQpdRPznG5YKbelZijddt8c6iSqWj_zz5uOY31cYDA9jVkVQ-pCgZ707r_7mwZaYXURfaVn_QKSlxYS3mgl6N3MmYn5Q_uIYMSZ2z9Ti8qMzmrQIIew0cpLP4hlvs5PD4-u2y-CFv65lOwqRTgjZwcjDisA">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-3 left-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase rounded-lg">Zone
+                                    03</span>
+                            </div>
+                            <div class="p-space-lg flex flex-col flex-grow">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container text-body-md">precision_manufacturing</span>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface">Resistance Circuit
+                                    </h3>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs flex-grow">
+                                    Selectorized strength machines, multi-station cable towers, chest press pods, and
+                                    isolated biomechanical leg press units.
+                                </p>
+                                <div class="mt-space-md pt-space-sm flex items-center justify-between">
+                                    <span class="font-label-sm text-label-sm uppercase text-primary">Biomechanical
+                                        Precision</span>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant text-[20px]">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Zone 4: Functional Turf & Ground Activity -->
+                        <div
+                            class="group flex flex-col rounded-2xl overflow-hidden bg-surface-container shadow-lg transition-transform duration-300 hover:-translate-y-1">
+                            <div class="relative h-72 w-full overflow-hidden">
+                                <img alt="Functional turf and sprint corridor at DREAM 1 GYM Sangli"
+                                    class="w-full h-full object-cover object-center group-hover:scale-110 transition-transform duration-500"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN6EJDylEXb6g2Qkdfqmn6V-MtHQCiWIYAUYCHxWrVDKCEnCAYl-Wcm-cUz2G7P8mgC5htNvZY_rcfKBV0d3mqdDxrp3M0qaTnTrglsnUmKaW3m6zuyelohBh6WtF-nbZQb--9o6wOGuAcr_bqGnsNB9d7E5mYWTkyAoKXP-lFPnYJNFDvh0dv0W9kBDQgBQYt9ox0A52TV0SuwHs3SA2ujULWD_n_iaE8TIiugyDnaRrG0drTGRIDkfL6Sdt1rMfq9w">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent">
+                                </div>
+                                <span
+                                    class="absolute top-3 left-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-sm text-primary font-label-sm text-label-sm uppercase rounded-lg">Zone
+                                    04</span>
+                            </div>
+                            <div class="p-space-lg flex flex-col flex-grow">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <span
+                                        class="material-symbols-outlined text-secondary-container text-body-md">sports_mma</span>
+                                    <h3 class="font-headline-md text-headline-md text-on-surface">Ground Activity Turf
+                                    </h3>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mt-space-xs flex-grow">
+                                    Dual battle ropes, striking dummy, agility ladders, plyo boxes, and marked sprint
+                                    lanes for CrossFit metabolic circuits.
+                                </p>
+                                <div class="mt-space-md pt-space-sm flex items-center justify-between">
+                                    <span class="font-label-sm text-label-sm uppercase text-primary">High-Intensity
+                                        Active</span>
+                                    <span
+                                        class="material-symbols-outlined text-on-surface-variant text-[20px]">arrow_forward</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- PROGRAMS & TRAINING DISCIPLINES --><!-- PROGRAMS & TRAINING DISCIPLINES -->
+            <section class="w-full bg-surface-container-lowest py-space-2xl">
+                <div class="w-full px-gutter lg:px-space-xl">
+                    <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+                        <span
+                            class="font-label-sm text-label-sm uppercase tracking-widest text-primary-container mb-space-xs block">Engineered
+                            Curriculums</span>
+                        <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase">Disciplines Built For
+                            Athletic Mastery</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">Whether you are building pure
+                            strength, cutting body fat, or training for functional athletic agility in Sangli.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+                        <!-- Program 1 -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-lg hover:bg-surface-container transition-colors">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary/10 text-primary-container flex items-center justify-center mb-space-md">
+                                    <span class="material-symbols-outlined text-[32px]">exercise</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Hypertrophy
+                                    &amp; Strength</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                                    Progressive overload schemes, Olympic compound movements, and isolated muscle
+                                    conditioning tailored to muscle mass gains.
+                                </p>
+                                <ul class="space-y-2 mb-space-lg">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        Deadlift &amp; Squat Technique
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        4-Day &amp; 6-Day Power Splits
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="font-label-lg text-label-lg uppercase tracking-wider text-primary hover:text-primary-container inline-flex items-center gap-1"
+                                href="#trial">
+                                Enroll Discipline <span
+                                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                        <!-- Program 2 -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container flex flex-col justify-between shadow-xl relative overflow-hidden">
+                            <div
+                                class="absolute top-0 right-0 px-4 py-1 bg-secondary-container text-on-secondary font-label-sm text-label-sm uppercase rounded-bl-xl font-bold">
+                                Most Popular
+                            </div>
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-secondary-container/20 text-secondary-container flex items-center justify-center mb-space-md">
+                                    <span class="material-symbols-outlined text-[32px]">timer</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">CrossFit &amp;
+                                    Functional HIIT</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                                    High-power functional conditioning, metabolic engine building, battle rope
+                                    intervals, and full ground sprint drills.
+                                </p>
+                                <ul class="space-y-2 mb-space-lg">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        Daily WODs on Ground Activity Turf
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        Explosive Calisthenics &amp; Plyos
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="font-label-lg text-label-lg uppercase tracking-wider text-secondary-container hover:text-secondary inline-flex items-center gap-1"
+                                href="#trial">
+                                Enroll Discipline <span
+                                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                        <!-- Program 3 -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-lg hover:bg-surface-container transition-colors">
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-xl bg-primary/10 text-primary-container flex items-center justify-center mb-space-md">
+                                    <span class="material-symbols-outlined text-[32px]">person_celebrate</span>
+                                </div>
+                                <h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">1-on-1
+                                    Personal Transformation</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+                                    Customized nutrition protocols, weekly body composition tracking, and dedicated
+                                    certified trainer coaching every rep.
+                                </p>
+                                <ul class="space-y-2 mb-space-lg">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        Biometric &amp; Fat Percentage Tracking
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check</span>
+                                        Indian Diet &amp; Nutrition Blueprints
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="font-label-lg text-label-lg uppercase tracking-wider text-primary hover:text-primary-container inline-flex items-center gap-1"
+                                href="#trial">
+                                Enroll Discipline <span
+                                    class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MEMBERSHIP & PRICING PLANS --><!-- MEMBERSHIP & PRICING PLANS -->
+            <section class="w-full bg-surface py-space-2xl">
+                <div class="w-full px-gutter lg:px-space-xl">
+                    <div class="text-center max-w-2xl mx-auto mb-space-2xl">
+                        <span
+                            class="font-label-sm text-label-sm uppercase tracking-widest text-secondary-container mb-space-xs block">Sangli
+                            Membership Passes</span>
+                        <h2 class="font-headline-xl text-headline-xl text-on-surface uppercase">Simple, High-Value
+                            Memberships</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Choose your tier and train in the
+                            best equipped athletic facility in the region.</p>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch">
+                        <!-- Monthly Tier -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-lg">
+                            <div>
+                                <div class="flex items-center justify-between mb-space-sm">
+                                    <span class="font-headline-md text-headline-md text-on-surface">Monthly
+                                        Access</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-on-surface-variant uppercase">Flexible</span>
+                                </div>
+                                <div class="flex items-baseline gap-1 mb-space-md">
+                                    <span class="font-headline-xl text-headline-xl text-on-surface">â‚¹1,000</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ month</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">Full access to
+                                    Strength, Cardio, and Functional Ground floor.</p>
+                                <ul class="space-y-3 mb-space-xl">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        Unlimited 5:00 AM â€“ 10:00 PM Access
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        Free Locker &amp; Shower Access
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        General Floor Guidance
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-bright transition-colors">
+                                Get Monthly Pass
+                            </button>
+                        </div>
+                        <!-- Quarterly Tier (Highlighted) -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container flex flex-col justify-between shadow-2xl relative">
+                            <div
+                                class="absolute -top-3 left-1/2 transform -translate-x-1/2 px-4 py-1 bg-primary-container text-on-primary font-label-sm text-label-sm uppercase rounded-full shadow-md font-bold">
+                                Best Value (Save 25%)
+                            </div>
+                            <div>
+                                <div class="flex items-center justify-between mb-space-sm mt-space-xs">
+                                    <span class="font-headline-md text-headline-md text-primary">Quarterly Power</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-secondary-container uppercase">Recommended</span>
+                                </div>
+                                <div class="flex items-baseline gap-1 mb-space-md">
+                                    <span class="font-headline-xl text-headline-xl text-on-surface">â‚¹2,499</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ 3 months</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">Ideal
+                                    commitment block for noticeable transformation results.</p>
+                                <ul class="space-y-3 mb-space-xl">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-primary-container text-body-md">check_circle</span>
+                                        All Monthly Access Privileges
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-primary-container text-body-md">check_circle</span>
+                                        2 InBody Body Composition Scans
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-primary-container text-body-md">check_circle</span>
+                                        Customized Diet Consultation
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-primary-container text-body-md">check_circle</span>
+                                        CrossFit Ground Activity Class Access
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full py-3.5 rounded-lg bg-primary-container text-on-primary font-label-lg text-label-lg uppercase tracking-wider font-bold shadow-[0_0_20px_rgba(0,229,255,0.3)] hover:bg-primary transition-all">
+                                Join Quarterly Pass
+                            </button>
+                        </div>
+                        <!-- Annual VIP Pass -->
+                        <div
+                            class="p-space-xl rounded-2xl bg-surface-container-low flex flex-col justify-between shadow-lg">
+                            <div>
+                                <div class="flex items-center justify-between mb-space-sm">
+                                    <span class="font-headline-md text-headline-md text-on-surface">Annual VIP
+                                        Elite</span>
+                                    <span
+                                        class="font-label-sm text-label-sm text-secondary-container uppercase">Ultimate</span>
+                                </div>
+                                <div class="flex items-baseline gap-1 mb-space-md">
+                                    <span class="font-headline-xl text-headline-xl text-on-surface">â‚¹8,999</span>
+                                    <span class="font-body-md text-body-md text-on-surface-variant">/ full year</span>
+                                </div>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">Total
+                                    year-round lifestyle dedication with dedicated personal support.</p>
+                                <ul class="space-y-3 mb-space-xl">
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        365 Days Unrestricted Floor Access
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        12 Personal Trainer Sessions Included
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        Unlimited Body Metric Diagnostics
+                                    </li>
+                                    <li class="flex items-center gap-2 font-body-md text-body-md text-on-surface">
+                                        <span
+                                            class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                                        1 Month Membership Freeze Option
+                                    </li>
+                                </ul>
+                            </div>
+                            <button
+                                class="w-full py-3 rounded-lg bg-surface-container-high text-on-surface font-label-lg text-label-lg uppercase tracking-wider hover:bg-surface-bright transition-colors">
+                                Get Annual VIP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SANGLI LOCATION, CONTACT & TRIAL FORM --><!-- SANGLI LOCATION, CONTACT & TRIAL FORM --></div></main>
+    <footer class="w-full bg-surface-container-lowest text-on-surface py-space-2xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-full px-gutter lg:px-space-xl">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl mb-space-2xl">
+                <div>
+                    <div class="flex items-center gap-space-sm mb-space-md"><img alt="DREAM - 1 GYM Logo"
+                            class="h-8 w-auto object-contain"
+                            src="https://lh3.googleusercontent.com/aida/AEtjO1WNQ506eC7e851AOhSfx103eS6br4lCI7vAhykiFpK3wt4NM0qc7fCC9nWTnUl1R0s5MmG-puPgwXg5QM_okeVLDUNxMw4PoJmWuWBqkpRMSlavAWddUa1nXTpucxElGMzpgNNsGy2Vbikua-vFY8JAXvbgTo0bpZdngd2TVIYaxNvtbdfJ5Zgqwr5PntlnF69E0mCf1wG908WyOpIMoN1Cm-SmO7Aq5RJ4Zz1P7Tq2UWX-i_OyQnCopQ"><span
+                            class="font-headline-lg text-headline-lg uppercase text-on-surface">DREAM - 1 <span
+                                class="text-primary-container">GYM</span></span></div>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Elite performance athletic
+                        complex in Sangli. Engineered for functional hypertrophy, Olympic lifting, strength
+                        conditioning, and professional fitness lifestyle transformation.</p>
+                    <div
+                        class="inline-flex items-center gap-space-sm px-3 py-1.5 rounded-full bg-surface-container-high">
+                        <span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span><span
+                            class="font-label-sm text-label-sm uppercase text-secondary-container">5:00 AM â€“ 10:00 PM
+                            Active Ops</span></div>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Sangli
+                        Location &amp; HQ</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-xs">Near Vijayanagar Chowk,
+                        Sangli-Miraj Road</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-xs">Sangli, Maharashtra 416416
+                    </p>
+                    <p class="font-body-md text-body-md text-on-surface mt-space-sm flex items-center gap-space-xs">
+                        <span class="material-symbols-outlined text-primary-container text-body-md">call</span> +91
+                        (0233) 267-1900</p>
+                    <p class="font-body-md text-body-md text-on-surface flex items-center gap-space-xs"><span
+                            class="material-symbols-outlined text-primary-container text-body-md">mail</span>
+                        j40000948@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Elite
+                        Amenities</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Biomechanics Turf &amp; Prowler Lane</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Rogue Olympic Lifting Racks</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Steam &amp; Cold Recovery Plunge</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            InBody Certified Body Composition</li>
+                        <li class="flex items-center gap-space-xs font-body-md text-body-md text-on-surface-variant">
+                            <span
+                                class="material-symbols-outlined text-secondary-container text-body-md">check_circle</span>
+                            Air-Conditioned Hygenic Locker Suites</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Connect
+                        &amp; Inquire</h3>
+                    <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">Follow live club updates,
+                        personal records, and trainer highlights directly from our Sangli community.</p>
+                    <div class="flex items-center gap-space-sm mb-space-lg"><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">share</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">videocam</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">forum</span></a><a
+                            class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high hover:text-primary transition-colors"
+                            href="javascript:void(0)"><span class="material-symbols-outlined text-[20px]">map</span></a></div>
+                    <div class="p-space-md rounded-xl bg-surface-container-low"><span
+                            class="font-label-sm text-label-sm uppercase text-on-surface-variant block mb-1">Floor
+                            Status</span><span
+                            class="font-body-md text-body-md text-secondary-container flex items-center gap-2"><span
+                                class="w-2 h-2 rounded-full bg-secondary-container"></span> Moderate Turf Density
+                            (38%)</span></div>
+                </div>
+            </div>
+            <div
+                class="pt-space-lg bg-surface-container-lowest flex flex-col md:flex-row items-center justify-between gap-space-md">
+                <span class="font-body-md text-body-md text-on-surface-variant">Â© 2025 DREAM - 1 GYM Sangli. All
+                    High-Performance Rights Reserved.</span>
+                <div class="flex items-center gap-space-md"><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Privacy Protocol</a><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Terms of Training</a><a
+                        class="font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface uppercase"
+                        href="javascript:void(0)">Sangli Facility Rules</a></div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
