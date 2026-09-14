@@ -5,7 +5,17 @@ export default async function handler(req, res) {
         return res.status(405).json({ success: false, message: 'Method Not Allowed' });
     }
 
-    const { fullName, phone, goal, timeSlot } = req.body;
+    const { 
+        formType = 'General Inquiry', 
+        fullName, 
+        warriorNickname, 
+        phone, 
+        goal, 
+        timeSlot, 
+        tenure = '3 Days', 
+        membershipTier,
+        notes 
+    } = req.body;
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -15,19 +25,23 @@ export default async function handler(req, res) {
         }
     });
 
+    const subject = `[${formType.toUpperCase()}] Lead from DREAM 1 GYM: ${fullName || 'Anonymous'}`;
+
+    const textContent = `You have received a new submission from DREAM 1 GYM.
+
+Submission Type: ${formType}
+----------------------------------------
+- Full Name: ${fullName || 'N/A'}
+${warriorNickname ? `- Warrior Nickname: ${warriorNickname}\n` : ''}- WhatsApp / Phone: ${phone || 'N/A'}
+${goal ? `- Fitness Goal: ${goal}\n` : ''}${tenure ? `- Trial / Membership Tenure: ${tenure}\n` : ''}${membershipTier ? `- Membership Plan: ${membershipTier}\n` : ''}${timeSlot ? `- Preferred Time Slot: ${timeSlot}\n` : ''}${notes ? `- Notes / Message: ${notes}\n` : ''}
+----------------------------------------
+Follow up with the lead immediately!`;
+
     const mailOptions = {
         from: 'j40000948@gmail.com',
         to: 'j40000948@gmail.com',
-        subject: `New Lead from DREAM 1 GYM: ${fullName}`,
-        text: `You have received a new trial registration form submission.
-
-Details:
-- Full Name: ${fullName}
-- WhatsApp / Phone Number: ${phone}
-- Primary Fitness Goal: ${goal}
-- Preferred Time Slot: ${timeSlot}
-
-Log into your system to follow up!`,
+        subject: subject,
+        text: textContent,
     };
 
     try {

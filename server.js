@@ -22,23 +22,37 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-// API Endpoint for Contact Form
+// API Endpoint for Contact Form & Registrations
 app.post('/api/contact', async (req, res) => {
-    const { fullName, phone, goal, timeSlot } = req.body;
+    const { 
+        formType = 'General Inquiry', 
+        fullName, 
+        warriorNickname, 
+        phone, 
+        goal, 
+        timeSlot, 
+        tenure = '3 Days', 
+        membershipTier,
+        notes 
+    } = req.body;
+
+    const subject = `[${formType.toUpperCase()}] Lead from DREAM 1 GYM: ${fullName || 'Anonymous'}`;
+
+    const textContent = `You have received a new submission from DREAM 1 GYM.
+
+Submission Type: ${formType}
+----------------------------------------
+- Full Name: ${fullName || 'N/A'}
+${warriorNickname ? `- Warrior Nickname: ${warriorNickname}\n` : ''}- WhatsApp / Phone: ${phone || 'N/A'}
+${goal ? `- Fitness Goal: ${goal}\n` : ''}${tenure ? `- Trial / Membership Tenure: ${tenure}\n` : ''}${membershipTier ? `- Membership Plan: ${membershipTier}\n` : ''}${timeSlot ? `- Preferred Time Slot: ${timeSlot}\n` : ''}${notes ? `- Notes / Message: ${notes}\n` : ''}
+----------------------------------------
+Follow up with the lead immediately!`;
 
     const mailOptions = {
         from: 'j40000948@gmail.com', // Sender address
-        to: 'j40000948@gmail.com', // Receiver address
-        subject: `New Lead from DREAM 1 GYM: ${fullName}`,
-        text: `You have received a new trial registration form submission.
-
-Details:
-- Full Name: ${fullName}
-- WhatsApp / Phone Number: ${phone}
-- Primary Fitness Goal: ${goal}
-- Preferred Time Slot: ${timeSlot}
-
-Log into your system to follow up!`,
+        to: 'j40000948@gmail.com',   // Receiver address
+        subject: subject,
+        text: textContent,
     };
 
     try {
@@ -46,7 +60,7 @@ Log into your system to follow up!`,
         res.status(200).json({ success: true, message: 'Message sent successfully!' });
     } catch (error) {
         console.error('Error sending email:', error);
-        res.status(500).json({ success: false, message: 'Failed to send message.' });
+        res.status(500).json({ success: false, message: 'Failed to send message.', error: error.message });
     }
 });
 

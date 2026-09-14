@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Member Performance Dashboard | DREAM 1 GYM</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Outfit:wght@500;700;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-low": "#181c21",
+                        "surface-container": "#1c2025",
+                        "surface": "#101419",
+                        "surface-container-high": "#262a30",
+                        "surface-container-lowest": "#0a0e13",
+                        "background": "#101419",
+                        "on-surface": "#e0e2ea",
+                        "on-surface-variant": "#bac9cc",
+                        "primary": "#c3f5ff",
+                        "primary-container": "#00e5ff",
+                        "on-primary": "#00363d",
+                        "secondary-container": "#caf300"
+                    },
+                    fontFamily: {
+                        "display": ["Syne", "sans-serif"],
+                        "headline": ["Bebas Neue", "sans-serif"],
+                        "heading": ["Outfit", "sans-serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+
+<body class="bg-background font-body text-on-surface antialiased min-h-screen flex flex-col justify-between">
+    <!-- Header -->
+    <div class="fixed top-0 left-0 w-full z-50">
+        <div class="w-full bg-surface-container-lowest py-1.5 px-4 text-center flex items-center justify-center gap-2 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <span class="material-symbols-outlined text-secondary-container text-sm">bolt</span>
+            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">DREAM 1 GYM Sangli • <strong class="text-primary-container">Warrior Portal Active</strong></span>
+        </div>
+        <header class="w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container-high/50">
+            <div class="h-20 w-full px-6 lg:px-10 flex items-center justify-between">
+                <a href="main.html" class="flex items-center gap-3">
+                    <img alt="DREAM - 1 GYM Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WNQ506eC7e851AOhSfx103eS6br4lCI7vAhykiFpK3wt4NM0qc7fCC9nWTnUl1R0s5MmG-puPgwXg5QM_okeVLDUNxMw4PoJmWuWBqkpRMSlavAWddUa1nXTpucxElGMzpgNNsGy2Vbikua-vFY8JAXvbgTo0bpZdngd2TVIYaxNvtbdfJ5Zgqwr5PntlnF69E0mCf1wG908WyOpIMoN1Cm-SmO7Aq5RJ4Zz1P7Tq2UWX-i_OyQnCopQ">
+                    <div class="flex flex-col">
+                        <span class="font-heading text-lg font-bold tracking-tight uppercase text-on-surface leading-none">DREAM - 1 <span class="text-primary-container">GYM</span></span>
+                        <span class="font-label text-[10px] uppercase text-on-surface-variant tracking-widest">Sangli Member Hub</span>
+                    </div>
+                </a>
+                <nav class="hidden xl:flex items-center gap-6">
+                    <a class="font-label text-xs text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg" href="main.html">Home & Tour</a>
+                    <a class="font-label text-xs font-bold text-primary bg-surface-container-high uppercase tracking-wider transition-colors py-2 px-3 rounded-lg" href="dashboard.html">Member Dashboard</a>
+                    <a class="font-label text-xs text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg" href="schedule.html">Schedule & Classes</a>
+                    <a class="font-label text-xs text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg" href="outdoor.html">OUTDOOR ACTIVITIES</a>
+                    <a class="font-label text-xs text-on-surface-variant hover:text-on-surface uppercase tracking-wider transition-colors py-2 px-3 rounded-lg" href="contact.html">Sangli Location & Contact</a>
+                </nav>
+                <div class="flex items-center gap-3">
+                    <a class="hidden sm:inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-low hover:bg-surface-container-high transition-all" href="trial.html">FREE 3 DAY TRIAL</a>
+                    <a class="inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-bold transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]" href="join.html">BE OUR PART</a>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Main Dashboard Section -->
+    <main class="w-full pt-32 pb-20 px-6 lg:px-12 flex-grow bg-surface">
+        <div class="max-w-7xl mx-auto space-y-10">
+
+            <!-- Member Welcome Header Card -->
+            <div class="bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low border border-surface-container-high rounded-3xl p-8 shadow-2xl relative overflow-hidden">
+                <div class="absolute -right-10 -top-10 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl pointer-events-none"></div>
+                
+                <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 relative z-10">
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="px-3 py-1 rounded-full bg-secondary-container/20 text-secondary-container font-label text-xs font-bold uppercase tracking-wider">Sangli Elite Athlete</span>
+                            <span class="text-on-surface-variant text-xs font-label">ID: D1G-8942</span>
+                        </div>
+                        <h1 class="font-display text-4xl sm:text-5xl font-extrabold text-on-surface uppercase tracking-tight">
+                            WELCOME BACK, <span class="text-primary-container" id="profileName">WARRIOR</span>
+                        </h1>
+                        <p class="font-body text-sm text-on-surface-variant mt-1">Consistency is victory. Manage your daily streaks, workout program, and nutrition macros below.</p>
+                    </div>
+
+                    <!-- Streak Counter Box -->
+                    <div class="bg-surface-container-lowest/80 backdrop-blur-md border border-surface-container-high p-5 rounded-2xl flex items-center gap-5 min-w-[260px] justify-between shadow-inner">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center animate-bounce">
+                                <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+                            </div>
+                            <div>
+                                <span class="font-headline text-3xl text-on-surface leading-none block"><span id="streakCount">14</span> DAYS</span>
+                                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider">Active Streak</span>
+                            </div>
+                        </div>
+                        <button id="checkInBtn" onclick="logDailyStreak()" class="px-3 py-2 rounded-xl bg-secondary-container text-on-secondary-fixed font-label text-xs font-bold uppercase hover:bg-secondary-fixed-dim transition-all shadow-md">
+                            Check In Today
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+                <!-- Left Column: Workout Plan Builder -->
+                <div class="lg:col-span-2 space-y-8">
+                    
+                    <!-- Daily Workout Plan Card -->
+                    <div class="bg-surface-container-low border border-surface-container-high rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-surface-container-high">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-primary-container text-2xl">fitness_center</span>
+                                <h2 class="font-heading text-2xl font-bold text-on-surface uppercase tracking-wide">Today's Workout Program</h2>
+                            </div>
+                            <span class="font-label text-xs px-3 py-1 bg-surface-container-high rounded-lg text-primary font-semibold">Phase: Hypertrophy</span>
+                        </div>
+
+                        <!-- Workout List -->
+                        <div class="space-y-4" id="workoutList">
+                            <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-center justify-between hover:border-primary-container/40 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">1</span>
+                                    <div>
+                                        <h4 class="font-heading font-bold text-on-surface text-base">Barbell Incline Bench Press</h4>
+                                        <span class="font-label text-xs text-on-surface-variant">4 Sets • 8-10 Reps • RPE 8</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-center justify-between hover:border-primary-container/40 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">2</span>
+                                    <div>
+                                        <h4 class="font-heading font-bold text-on-surface text-base">Standing Overhead Dumbbell Press</h4>
+                                        <span class="font-label text-xs text-on-surface-variant">3 Sets • 10-12 Reps • Progressive Load</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
+                            </div>
+
+                            <div class="p-4 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-center justify-between hover:border-primary-container/40 transition-colors">
+                                <div class="flex items-center gap-4">
+                                    <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">3</span>
+                                    <div>
+                                        <h4 class="font-heading font-bold text-on-surface text-base">Weighted Parallel Bar Dips</h4>
+                                        <span class="font-label text-xs text-on-surface-variant">3 Sets • Failure Finish</span>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
+                            </div>
+                        </div>
+
+                        <!-- Add Custom Exercise Input -->
+                        <div class="mt-6 pt-4 border-t border-surface-container-high flex gap-3">
+                            <input type="text" id="exerciseInput" placeholder="Add custom exercise (e.g., Cable Flyes 3x15)..." class="flex-grow bg-surface-container-lowest border border-surface-container-high rounded-xl px-4 py-2.5 text-sm text-on-surface focus:outline-none focus:border-primary-container">
+                            <button onclick="addExercise()" class="px-5 py-2.5 rounded-xl bg-primary-container text-on-primary font-label font-bold text-xs uppercase hover:bg-primary transition-all">
+                                + Add
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Weekly Schedule Grid -->
+                    <div class="bg-surface-container-low border border-surface-container-high rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <h2 class="font-heading text-xl font-bold text-on-surface uppercase tracking-wide mb-4">Weekly Workout Split</h2>
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                            <div class="p-3 bg-surface-container-lowest rounded-xl border border-primary-container/30 text-center">
+                                <span class="font-label text-[10px] uppercase text-primary-container block font-bold">Mon</span>
+                                <span class="font-body text-xs font-semibold text-on-surface block mt-1">Chest & Triceps</span>
+                            </div>
+                            <div class="p-3 bg-surface-container-lowest rounded-xl border border-surface-container-high text-center">
+                                <span class="font-label text-[10px] uppercase text-on-surface-variant block">Tue</span>
+                                <span class="font-body text-xs font-semibold text-on-surface block mt-1">Back & Biceps</span>
+                            </div>
+                            <div class="p-3 bg-surface-container-lowest rounded-xl border border-surface-container-high text-center">
+                                <span class="font-label text-[10px] uppercase text-on-surface-variant block">Wed</span>
+                                <span class="font-body text-xs font-semibold text-on-surface block mt-1">Turf Legs & Abs</span>
+                            </div>
+                            <div class="p-3 bg-surface-container-lowest rounded-xl border border-surface-container-high text-center">
+                                <span class="font-label text-[10px] uppercase text-on-surface-variant block">Thu</span>
+                                <span class="font-body text-xs font-semibold text-on-surface block mt-1">Active Recovery</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Diet Plan & Macros -->
+                <div class="space-y-8">
+                    
+                    <!-- Diet & Macros Card -->
+                    <div class="bg-surface-container-low border border-surface-container-high rounded-2xl p-6 sm:p-8 shadow-xl">
+                        <div class="flex items-center justify-between mb-6 pb-4 border-b border-surface-container-high">
+                            <div class="flex items-center gap-3">
+                                <span class="material-symbols-outlined text-secondary-container text-2xl">restaurant</span>
+                                <h2 class="font-heading text-xl font-bold text-on-surface uppercase tracking-wide">Nutrition Tracker</h2>
+                            </div>
+                        </div>
+
+                        <!-- Calorie Target Progress -->
+                        <div class="mb-6 bg-surface-container-lowest p-4 rounded-xl border border-surface-container-high">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="font-label text-xs uppercase text-on-surface-variant">Daily Calorie Target</span>
+                                <span class="font-headline text-lg text-secondary-container"><span id="currentCals">1,850</span> / 2,400 kcal</span>
+                            </div>
+                            <div class="w-full h-3 bg-surface-container-high rounded-full overflow-hidden">
+                                <div id="calBar" class="h-full bg-secondary-container transition-all duration-500" style="width: 77%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Macros Breakdown -->
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-xs font-label mb-1">
+                                    <span class="text-on-surface-variant">Protein Goal (180g)</span>
+                                    <span class="text-primary font-bold">145g logged</span>
+                                </div>
+                                <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary" style="width: 80%;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs font-label mb-1">
+                                    <span class="text-on-surface-variant">Carbs Goal (220g)</span>
+                                    <span class="text-on-surface font-bold">170g logged</span>
+                                </div>
+                                <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                    <div class="h-full bg-on-surface-variant" style="width: 77%;"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs font-label mb-1">
+                                    <span class="text-on-surface-variant">Healthy Fats (60g)</span>
+                                    <span class="text-secondary-container font-bold">48g logged</span>
+                                </div>
+                                <div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+                                    <div class="h-full bg-secondary-container" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Meal Logger -->
+                        <div class="mt-8 pt-4 border-t border-surface-container-high">
+                            <span class="font-label text-xs uppercase text-on-surface-variant block mb-3">Quick Log Calories</span>
+                            <div class="flex gap-2">
+                                <button onclick="addCalories(300)" class="flex-1 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-xs font-label font-bold text-on-surface border border-surface-container-high transition-colors">
+                                    +300 kcal (Shake)
+                                </button>
+                                <button onclick="addCalories(500)" class="flex-1 py-2 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-xs font-label font-bold text-on-surface border border-surface-container-high transition-colors">
+                                    +500 kcal (Meal)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Personal Trainer Contact Box -->
+                    <div class="bg-gradient-to-br from-surface-container-low to-surface-container border border-primary-container/30 rounded-2xl p-6 shadow-xl">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center font-bold font-heading">
+                                HQ
+                            </div>
+                            <div>
+                                <h3 class="font-heading font-bold text-on-surface text-base">Sangli Head Coach</h3>
+                                <span class="font-label text-xs text-secondary-container">Online • Sangli Floor Desk</span>
+                            </div>
+                        </div>
+                        <p class="font-body text-xs text-on-surface-variant mb-4">Need to revise your hypertrophy split or custom macro targets? Message our training desk.</p>
+                        <a href="contact.html" class="block text-center py-2.5 rounded-xl bg-primary-container text-on-primary font-label font-bold text-xs uppercase hover:bg-primary transition-all">
+                            Chat With Trainer Desk
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full bg-surface-container-lowest py-8 px-6 text-center text-xs text-on-surface-variant border-t border-surface-container-high">
+        <p>© 2025 DREAM - 1 GYM Sangli. Athlete Performance Hub.</p>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        let currentStreak = 14;
+        let checkedIn = false;
+        let cals = 1850;
+
+        function logDailyStreak() {
+            const btn = document.getElementById('checkInBtn');
+            const streakDisplay = document.getElementById('streakCount');
+
+            if (!checkedIn) {
+                currentStreak += 1;
+                checkedIn = true;
+                streakDisplay.innerText = currentStreak;
+                btn.className = "px-3 py-2 rounded-xl bg-green-500/20 text-green-400 border border-green-500/30 font-label text-xs font-bold uppercase cursor-default";
+                btn.innerText = "✓ Logged Today";
+            }
+        }
+
+        function addExercise() {
+            const input = document.getElementById('exerciseInput');
+            const val = input.value.trim();
+            if (!val) return;
+
+            const list = document.getElementById('workoutList');
+            const count = list.children.length + 1;
+
+            const div = document.createElement('div');
+            div.className = "p-4 rounded-xl bg-surface-container-lowest border border-surface-container-high/60 flex items-center justify-between hover:border-primary-container/40 transition-colors animate-fade-in";
+            div.innerHTML = `
+                <div class="flex items-center gap-4">
+                    <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">${count}</span>
+                    <div>
+                        <h4 class="font-heading font-bold text-on-surface text-base">${val}</h4>
+                        <span class="font-label text-xs text-on-surface-variant">Custom Added Exercise</span>
+                    </div>
+                </div>
+                <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
+            `;
+            list.appendChild(div);
+            input.value = '';
+        }
+
+        function addCalories(amount) {
+            cals += amount;
+            document.getElementById('currentCals').innerText = cals.toLocaleString();
+            const pct = Math.min(100, Math.round((cals / 2400) * 100));
+            document.getElementById('calBar').style.width = pct + '%';
+        }
+    </script>
+</body>
+
+</html>
