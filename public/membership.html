@@ -374,26 +374,15 @@
                 </div>
                 <div>
                     <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Sangli Location &amp; HQ</h3>
-                    <div class="space-y-2 mb-space-sm">
-                        <a href="https://www.bing.com/ck/a?!&&p=5e04e107455b99619e9b48298f59b7638066da96443445753a3889ebc75dbeafJmltdHM9MTc5MDM4MDgwMA&ptn=3&ver=2&hsh=4&fclid=1ebce6b4-5ba0-6a0e-1b3a-f1c95ae06b46&u=a1L21hcHM_Jm1lcGk9MH5-RW1iZWRkZWR-QWRkcmVzc19MaW5rJnR5PTE4JnE9RHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bSZzcz15cGlkLllOQ0IzN0UzRDJCRUU5M0JDQiZwcG9pcz0xNi44Mzk5Njk2MzUwMDk3NjZfNzQuNTk2NjExMDIyOTQ5MjJfRHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bV_ZTkNCMzdFM0QyQkVFOTNCQ0J-JmNwPTE6LjgzOTk3fjc0LjU5NjYxMSZ2PTImc1Y9MSZGT1JNPU1QU1JQTA&ntb=1" target="_blank" rel="noopener noreferrer" class="flex items-start gap-1.5 group">
-                            <span class="material-symbols-outlined text-primary-container text-body-md mt-0.5 flex-shrink-0">location_on</span>
-                            <span class="font-body-md text-body-md text-on-surface-variant group-hover:text-primary transition-colors leading-snug">Kore Empire B Wing,<br>Ainshi Road, Sangli, MH</span>
-                        </a>
-                        <div class="flex flex-col gap-1.5 pt-1">
-                            <a href="https://www.bing.com/ck/a?!&&p=5e04e107455b99619e9b48298f59b7638066da96443445753a3889ebc75dbeafJmltdHM9MTc5MDM4MDgwMA&ptn=3&ver=2&hsh=4&fclid=1ebce6b4-5ba0-6a0e-1b3a-f1c95ae06b46&u=a1L21hcHM_Jm1lcGk9MH5-RW1iZWRkZWR-QWRkcmVzc19MaW5rJnR5PTE4JnE9RHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bSZzcz15cGlkLllOQ0IzN0UzRDJCRUU5M0JDQiZwcG9pcz0xNi44Mzk5Njk2MzUwMDk3NjZfNzQuNTk2NjExMDIyOTQ5MjJfRHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bV_ZTkNCMzdFM0QyQkVFOTNCQ0J-JmNwPTE6LjgzOTk3fjc0LjU5NjYxMSZ2PTImc1Y9MSZGT1JNPU1QU1JQTA&ntb=1" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-bold text-primary-container hover:underline">
-                                <span class="material-symbols-outlined text-sm">map</span> Bing Maps Directions →
-                            </a>
-                            <button onclick="openLiveGoogleMaps(event)" class="inline-flex items-center gap-1 text-xs font-bold text-secondary-container hover:underline cursor-pointer text-left">
-                                <span class="material-symbols-outlined text-sm">near_me</span> Google Maps (From Live Location) →
-                            </button>
-                        </div>
-                    </div>
-                    <p class="font-body-md text-body-md text-on-surface mt-space-sm flex items-center gap-space-xs">
-                        <span class="material-symbols-outlined text-primary-container text-body-md">call</span> +91
-                        (0233) 267-1900</p>
-                    <p class="font-body-md text-body-md text-on-surface flex items-center gap-space-xs"><span
-                            class="material-symbols-outlined text-primary-container text-body-md">mail</span>
-                        j40000948@gmail.com</p>
+                    <p class="font-body-md text-body-md text-on-surface-variant leading-snug mb-2">Kore Empire B Wing,<br>Ainshi Road, Sangli, MH</p>
+                    <button onclick="openLiveGoogleMaps(event)" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container-high text-secondary-container hover:text-primary-container font-label text-xs font-bold uppercase tracking-wider transition-all border border-secondary-container/30 cursor-pointer mb-2">
+                        <span class="material-symbols-outlined text-sm text-primary-container animate-pulse">near_me</span>
+                        <span>DIRECTIONS TO US... FROM YOUR LOCATION</span>
+                    </button>
+                    <p class="font-body-md text-body-md text-on-surface mt-1 flex items-center gap-space-xs">
+                        <span class="material-symbols-outlined text-primary-container text-body-md">call</span> +91 (0233) 267-1900</p>
+                    <p class="font-body-md text-body-md text-on-surface flex items-center gap-space-xs">
+                        <span class="material-symbols-outlined text-primary-container text-body-md">mail</span> j40000948@gmail.com</p>
                 </div>
                 <div>
                     <h3 class="font-label-lg text-label-lg uppercase tracking-widest text-primary mb-space-md">Elite
@@ -456,6 +445,7 @@
                         href="javascript:void(0)">Sangli Facility Rules</a></div>
             </div>
         </div>
+    
     <script>
         function openLiveGoogleMaps(e) {
             if (e) e.preventDefault();
@@ -464,20 +454,20 @@
             
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    (pos) => {
+                    function(pos) {
                         const lat = pos.coords.latitude;
                         const lng = pos.coords.longitude;
-                        const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodedDest}&travelmode=driving`;
+                        const url = "https://www.google.com/maps/dir/?api=1&origin=" + lat + "," + lng + "&destination=" + encodedDest + "&travelmode=driving";
                         window.open(url, '_blank');
                     },
-                    () => {
-                        const url = `https://www.google.com/maps/dir/?api=1&destination=${encodedDest}`;
+                    function() {
+                        const url = "https://www.google.com/maps/dir/?api=1&destination=" + encodedDest;
                         window.open(url, '_blank');
                     },
                     { timeout: 7000 }
                 );
             } else {
-                const url = `https://www.google.com/maps/dir/?api=1&destination=${encodedDest}`;
+                const url = "https://www.google.com/maps/dir/?api=1&destination=" + encodedDest;
                 window.open(url, '_blank');
             }
         }

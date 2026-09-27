@@ -218,6 +218,7 @@
     <footer class="w-full bg-surface-container-lowest py-8 px-6 text-center text-xs text-on-surface-variant border-t border-surface-container-high">
         <p>© 2025 DREAM - 1 GYM Sangli. High Performance Outdoor Arena.</p>
     </footer>
+    
     <script>
         function openLiveGoogleMaps(e) {
             if (e) e.preventDefault();
@@ -226,20 +227,20 @@
             
             if (navigator.geolocation) {
                 navigator.geolocation.getCurrentPosition(
-                    (pos) => {
+                    function(pos) {
                         const lat = pos.coords.latitude;
                         const lng = pos.coords.longitude;
-                        const url = https://www.google.com/maps/dir/?api=1&origin= + lat + , + lng + &destination= + encodedDest + &travelmode=driving;
+                        const url = "https://www.google.com/maps/dir/?api=1&origin=" + lat + "," + lng + "&destination=" + encodedDest + "&travelmode=driving";
                         window.open(url, '_blank');
                     },
-                    () => {
-                        const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                    function() {
+                        const url = "https://www.google.com/maps/dir/?api=1&destination=" + encodedDest;
                         window.open(url, '_blank');
                     },
                     { timeout: 7000 }
                 );
             } else {
-                const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                const url = "https://www.google.com/maps/dir/?api=1&destination=" + encodedDest;
                 window.open(url, '_blank');
             }
         }
