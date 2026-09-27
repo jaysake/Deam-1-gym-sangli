@@ -47,7 +47,7 @@
     <div class="fixed top-0 left-0 w-full z-50">
         <div class="w-full bg-surface-container-lowest py-1.5 px-4 text-center flex items-center justify-center gap-2 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
             <span class="material-symbols-outlined text-secondary-container text-sm">bolt</span>
-            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">DREAM 1 GYM Sangli • <strong class="text-primary-container">Warrior Portal Active</strong></span>
+            <span class="font-label text-xs uppercase tracking-wider text-on-surface-variant">DREAM 1 GYM Sangli - <strong class="text-primary-container">Warrior Portal Active</strong></span>
         </div>
         <header class="w-full bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container-high/50">
             <div class="h-20 w-full px-6 lg:px-10 flex items-center justify-between">
@@ -93,18 +93,18 @@
                         <p class="font-body text-sm text-on-surface-variant mt-1">Consistency is victory. Manage your daily streaks, workout program, and nutrition macros below.</p>
                     </div>
 
-                    <!-- Streak Counter Box -->
-                    <div class="bg-surface-container-lowest/80 backdrop-blur-md border border-surface-container-high p-5 rounded-2xl flex items-center gap-5 min-w-[260px] justify-between shadow-inner">
-                        <div class="flex items-center gap-3">
-                            <div class="w-12 h-12 rounded-xl bg-orange-500/20 text-orange-400 flex items-center justify-center animate-bounce">
-                                <span class="material-symbols-outlined text-3xl">local_fire_department</span>
+                    <!-- Streak Counter Box (Visible Dark) -->
+                    <div class="bg-[#080c10] border-2 border-primary-container/40 p-6 rounded-2xl flex items-center gap-6 min-w-[310px] justify-between shadow-[0_10px_30px_rgba(0,0,0,0.8)]">
+                        <div class="flex items-center gap-3.5">
+                            <div class="w-14 h-14 rounded-2xl bg-orange-950/80 border border-orange-500/40 text-orange-400 flex items-center justify-center animate-bounce shadow-md">
+                                <span class="material-symbols-outlined text-3xl drop-shadow-[0_0_10px_rgba(251,146,60,0.6)]">local_fire_department</span>
                             </div>
                             <div>
-                                <span class="font-headline text-3xl text-on-surface leading-none block"><span id="streakCount">14</span> DAYS</span>
-                                <span class="font-label text-[10px] text-on-surface-variant uppercase tracking-wider">Active Streak</span>
+                                <span class="font-headline text-4xl font-extrabold text-white leading-none block tracking-wide"><span id="streakCount" class="text-primary-container">14</span> DAYS</span>
+                                <span class="font-label text-xs font-bold text-secondary-container uppercase tracking-widest mt-0.5 block">Active Streak</span>
                             </div>
                         </div>
-                        <button id="checkInBtn" onclick="logDailyStreak()" class="px-4 py-2.5 rounded-xl font-label text-xs font-bold uppercase transition-all shadow-lg" style="background:#00363d;color:#00e5ff;border:2px solid #00e5ff;letter-spacing:0.06em;box-shadow:0 0 16px rgba(0,229,255,0.35);">
+                        <button id="checkInBtn" onclick="logDailyStreak()" class="px-5 py-3 rounded-xl font-label text-xs font-black uppercase tracking-wider transition-all duration-300 bg-[#00262d] hover:bg-[#00444f] text-primary-container border-2 border-primary-container shadow-[0_0_20px_rgba(0,229,255,0.35)] hover:scale-105 active:scale-95">
                             Check In Today
                         </button>
                     </div>
@@ -134,7 +134,7 @@
                                     <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">1</span>
                                     <div>
                                         <h4 class="font-heading font-bold text-on-surface text-base">Barbell Incline Bench Press</h4>
-                                        <span class="font-label text-xs text-on-surface-variant">4 Sets • 8-10 Reps • RPE 8</span>
+                                        <span class="font-label text-xs text-on-surface-variant">4 Sets - 8-10 Reps - RPE 8</span>
                                     </div>
                                 </div>
                                 <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
@@ -145,7 +145,7 @@
                                     <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">2</span>
                                     <div>
                                         <h4 class="font-heading font-bold text-on-surface text-base">Standing Overhead Dumbbell Press</h4>
-                                        <span class="font-label text-xs text-on-surface-variant">3 Sets • 10-12 Reps • Progressive Load</span>
+                                        <span class="font-label text-xs text-on-surface-variant">3 Sets - 10-12 Reps - Progressive Load</span>
                                     </div>
                                 </div>
                                 <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
@@ -156,7 +156,7 @@
                                     <span class="w-8 h-8 rounded-lg bg-primary-container/10 text-primary-container font-label font-bold text-xs flex items-center justify-center">3</span>
                                     <div>
                                         <h4 class="font-heading font-bold text-on-surface text-base">Weighted Parallel Bar Dips</h4>
-                                        <span class="font-label text-xs text-on-surface-variant">3 Sets • Failure Finish</span>
+                                        <span class="font-label text-xs text-on-surface-variant">3 Sets - Failure Finish</span>
                                     </div>
                                 </div>
                                 <input type="checkbox" class="w-5 h-5 accent-primary-container rounded cursor-pointer">
@@ -274,7 +274,7 @@
                             </div>
                             <div>
                                 <h3 class="font-heading font-bold text-on-surface text-base">Sangli Head Coach</h3>
-                                <span class="font-label text-xs text-secondary-container">Online • Sangli Floor Desk</span>
+                                <span class="font-label text-xs text-secondary-container">Online - Sangli Floor Desk</span>
                             </div>
                         </div>
                         <p class="font-body text-xs text-on-surface-variant mb-4">Need to revise your hypertrophy split or custom macro targets? Message our training desk.</p>
