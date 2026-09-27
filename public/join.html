@@ -66,7 +66,7 @@
                 </nav>
                 <div class="flex items-center gap-3">
                     <a class="hidden sm:inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-low hover:bg-surface-container-high transition-all" href="trial.html">FREE 3 DAY TRIAL</a>
-                    <a class="inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary font-bold transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]" href="join.html">BE OUR PART</a>
+                    <a class="inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-slate-950 font-black hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)]" href="join.html">BE OUR PART</a>
                 </div>
             </div>
         </header>
@@ -123,8 +123,8 @@
                     <textarea id="notes" rows="3" placeholder="Tell us any injuries, special targets, or questions..." class="w-full bg-surface-container-lowest border border-surface-container-high rounded-xl px-4 py-3 text-on-surface placeholder-on-surface-variant/40 focus:outline-none focus:border-primary-container transition-colors font-body text-sm"></textarea>
                 </div>
 
-                <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-xl bg-secondary-container text-on-secondary-fixed font-heading font-bold text-lg uppercase tracking-wider hover:bg-secondary-fixed-dim transition-all shadow-[0_0_24px_rgba(202,243,0,0.25)] mt-4 flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">send</span>
+                <button type="submit" id="submitBtn" class="w-full py-4.5 px-6 rounded-xl bg-gradient-to-r from-primary-container via-[#00f0ff] to-secondary-container text-slate-950 font-heading font-extrabold text-xl uppercase tracking-wider hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(0,229,255,0.4)] mt-5 flex items-center justify-center gap-2 border-2 border-primary-container cursor-pointer">
+                    <span class="material-symbols-outlined font-black text-2xl">send</span>
                     <span>Submit & Join Dream 1 Gym</span>
                 </button>
             </form>
@@ -181,6 +181,32 @@
                 btn.innerHTML = `<span class="material-symbols-outlined">send</span><span>Submit & Join Dream 1 Gym</span>`;
             }
         });
+    </script>
+    <script>
+        function openLiveGoogleMaps(e) {
+            if (e) e.preventDefault();
+            const dest = "Dream 1 Fitness Gym, Kore Empire B Wing, Ainshi Road, Sangli, MH";
+            const encodedDest = encodeURIComponent(dest);
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const lat = pos.coords.latitude;
+                        const lng = pos.coords.longitude;
+                        const url = https://www.google.com/maps/dir/?api=1&origin= + lat + , + lng + &destination= + encodedDest + &travelmode=driving;
+                        window.open(url, '_blank');
+                    },
+                    () => {
+                        const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                        window.open(url, '_blank');
+                    },
+                    { timeout: 7000 }
+                );
+            } else {
+                const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                window.open(url, '_blank');
+            }
+        }
     </script>
 </body>
 

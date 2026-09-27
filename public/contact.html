@@ -80,7 +80,7 @@
                 <div class="flex items-center gap-space-md"><a
                         class="hidden sm:inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-low hover:bg-surface-container-high hover:text-secondary-container transition-all"
                         href="trial.html">Free 3 DAY<br>TRIAL</a><a
-                        class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]"
+                        class="inline-flex items-center justify-center font-label-lg text-label-lg uppercase tracking-wider px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-slate-950 font-black hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)]"
                         href="join.html">BE OUR PART<br></a>
                     <a href="dashboard.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span
                             class="material-symbols-outlined text-on-primary text-[18px]">person</span></a>
@@ -136,13 +136,19 @@
                         </div>
                     </div>
 
-                    <div class="mt-8 pt-6 border-t border-surface-container-high">
-                        <a href="https://www.bing.com/ck/a?!&&p=5e04e107455b99619e9b48298f59b7638066da96443445753a3889ebc75dbeafJmltdHM9MTc5MDM4MDgwMA&ptn=3&ver=2&hsh=4&fclid=1ebce6b4-5ba0-6a0e-1b3a-f1c95ae06b46&u=a1L21hcHM_Jm1lcGk9MH5-RW1iZWRkZWR-QWRkcmVzc19MaW5rJnR5PTE4JnE9RHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bSZzcz15cGlkLllOQ0IzN0UzRDJCRUU5M0JDQiZwcG9pcz0xNi44Mzk5Njk2MzUwMDk3NjZfNzQuNTk2NjExMDIyOTQ5MjJfRHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bV_ZTkNCMzdFM0QyQkVFOTNCQ0J-JmNwPTE2LjgzOTk3fjc0LjU5NjYxMSZ2PTImc1Y9MSZGT1JNPU1QU1JQTA&ntb=1" 
+                    <div class="mt-8 pt-6 border-t border-surface-container-high space-y-3">
+                        <a href="https://www.bing.com/ck/a?!&&p=5e04e107455b99619e9b48298f59b7638066da96443445753a3889ebc75dbeafJmltdHM9MTc5MDM4MDgwMA&ptn=3&ver=2&hsh=4&fclid=1ebce6b4-5ba0-6a0e-1b3a-f1c95ae06b46&u=a1L21hcHM_Jm1lcGk9MH5-RW1iZWRkZWR-QWRkcmVzc19MaW5rJnR5PTE4JnE9RHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bSZzcz15cGlkLllOQ0IzN0UzRDJCRUU5M0JDQiZwcG9pcz0xNi44Mzk5Njk2MzUwMDk3NjZfNzQuNTk2NjExMDIyOTQ5MjJfRHJlYW0lMjAxJTIwRml0bmVzcyUyMEd5bV_ZTkNCMzdFM0QyQkVFOTNCQ0J-JmNwPTE6LjgzOTk3fjc0LjU5NjYxMSZ2PTImc1Y9MSZGT1JNPU1QU1JQTA&ntb=1" 
                            target="_blank" rel="noopener noreferrer" 
-                           class="w-full py-4 rounded-2xl bg-primary-container text-on-primary font-headline text-xl uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary transition-all shadow-[0_0_25px_rgba(0,229,255,0.3)] font-bold">
-                            <span class="material-symbols-outlined text-2xl">directions</span>
+                           class="w-full py-3.5 px-4 rounded-2xl bg-primary-container text-on-primary font-headline text-lg uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-primary transition-all shadow-[0_0_20px_rgba(0,229,255,0.3)] font-extrabold border border-primary-container">
+                            <span class="material-symbols-outlined text-2xl">map</span>
                             <span>Get Turn-By-Turn Directions (Bing Maps)</span>
                         </a>
+
+                        <button onclick="openLiveGoogleMaps(event)" 
+                                class="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-secondary-container to-[#d9ff00] text-slate-950 font-headline text-lg uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 transition-all shadow-[0_0_20px_rgba(202,243,0,0.3)] font-extrabold border border-secondary-container cursor-pointer">
+                            <span class="material-symbols-outlined text-2xl">near_me</span>
+                            <span>Google Maps Directions (From Live Location)</span>
+                        </button>
                     </div>
                 </div>
 
@@ -172,7 +178,7 @@
                                 <label class="font-label text-xs uppercase text-on-surface-variant block mb-1">Your Inquiry / Message</label>
                                 <textarea rows="3" required placeholder="Inquire about membership pricing, personal training, or trial pass..." class="w-full bg-surface-container-lowest border border-surface-container-high rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary-container"></textarea>
                             </div>
-                            <button type="submit" class="w-full py-4 rounded-2xl bg-surface-container-high text-secondary-container hover:text-on-primary hover:bg-secondary-container font-headline text-lg uppercase tracking-wider transition-all font-bold border border-secondary-container/40">
+                            <button type="submit" class="w-full py-4 rounded-2xl bg-gradient-to-r from-primary-container to-secondary-container text-slate-950 font-headline text-lg uppercase tracking-wider transition-all font-extrabold hover:brightness-110 border border-primary-container cursor-pointer">
                                 Send Message to Dream 1 Desk
                             </button>
                         </form>
@@ -191,6 +197,31 @@
             e.preventDefault();
             document.getElementById('contactForm').reset();
             document.getElementById('contactNotice').classList.remove('hidden');
+        }
+
+        function openLiveGoogleMaps(e) {
+            if (e) e.preventDefault();
+            const dest = "Dream 1 Fitness Gym, Kore Empire B Wing, Ainshi Road, Sangli, MH";
+            const encodedDest = encodeURIComponent(dest);
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const lat = pos.coords.latitude;
+                        const lng = pos.coords.longitude;
+                        const url = `https://www.google.com/maps/dir/?api=1&origin=${lat},${lng}&destination=${encodedDest}&travelmode=driving`;
+                        window.open(url, '_blank');
+                    },
+                    () => {
+                        const url = `https://www.google.com/maps/dir/?api=1&destination=${encodedDest}`;
+                        window.open(url, '_blank');
+                    },
+                    { timeout: 7000 }
+                );
+            } else {
+                const url = `https://www.google.com/maps/dir/?api=1&destination=${encodedDest}`;
+                window.open(url, '_blank');
+            }
         }
     </script>
 

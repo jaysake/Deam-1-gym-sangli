@@ -66,7 +66,7 @@
                 </nav>
                 <div class="flex items-center gap-3">
                     <a class="hidden sm:inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded-lg text-secondary-container bg-surface-container-high transition-all" href="trial.html">FREE 3 DAY TRIAL</a>
-                    <a class="inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary transition-all shadow-[0_0_24px_rgba(0,229,255,0.25)]" href="join.html">BE OUR PART</a>
+                    <a class="inline-flex items-center justify-center font-label text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-lg bg-gradient-to-r from-primary-container to-secondary-container text-slate-950 font-black hover:scale-105 transition-all shadow-[0_0_20px_rgba(0,229,255,0.4)]" href="join.html">BE OUR PART</a>
                 </div>
             </div>
         </header>
@@ -122,8 +122,8 @@
                     </select>
                 </div>
 
-                <button type="submit" id="submitBtn" class="w-full py-4 px-6 rounded-xl bg-primary-container text-on-primary font-heading font-bold text-lg uppercase tracking-wider hover:bg-primary transition-all shadow-[0_0_24px_rgba(0,229,255,0.3)] mt-4 flex items-center justify-center gap-2">
-                    <span class="material-symbols-outlined">bolt</span>
+                <button type="submit" id="submitBtn" class="w-full py-4.5 px-6 rounded-xl bg-gradient-to-r from-secondary-container via-[#d9ff00] to-primary-container text-slate-950 font-heading font-extrabold text-xl uppercase tracking-wider hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all shadow-[0_0_30px_rgba(202,243,0,0.4)] mt-5 flex items-center justify-center gap-2 border-2 border-secondary-container cursor-pointer">
+                    <span class="material-symbols-outlined font-black text-2xl">bolt</span>
                     <span>Submit & Activate 3-Day Pass</span>
                 </button>
             </form>
@@ -180,6 +180,32 @@
                 btn.innerHTML = `<span class="material-symbols-outlined">bolt</span><span>Submit & Activate 3-Day Pass</span>`;
             }
         });
+    </script>
+    <script>
+        function openLiveGoogleMaps(e) {
+            if (e) e.preventDefault();
+            const dest = "Dream 1 Fitness Gym, Kore Empire B Wing, Ainshi Road, Sangli, MH";
+            const encodedDest = encodeURIComponent(dest);
+            
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (pos) => {
+                        const lat = pos.coords.latitude;
+                        const lng = pos.coords.longitude;
+                        const url = https://www.google.com/maps/dir/?api=1&origin= + lat + , + lng + &destination= + encodedDest + &travelmode=driving;
+                        window.open(url, '_blank');
+                    },
+                    () => {
+                        const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                        window.open(url, '_blank');
+                    },
+                    { timeout: 7000 }
+                );
+            } else {
+                const url = https://www.google.com/maps/dir/?api=1&destination= + encodedDest;
+                window.open(url, '_blank');
+            }
+        }
     </script>
 </body>
 
